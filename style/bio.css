@@ -84,4 +84,30 @@ a:active {
   max-width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.biography-footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #323232;
+  color: white;
+}
+.biography-footer__header {
+  padding-top: 2rem;
+}
+.biography-footer__icon {
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+.biography-footer__info {
+  margin: 0;
+  white-space: pre-line;
+  margin-bottom: 1rem;
+}
+.biography-footer__head {
+  margin-top: 3rem;
+}
+.biography-footer__copyright {
+  font-size: 0.73rem;
+  margin: 0%;
 }/*# sourceMappingURL=bio.css.map */

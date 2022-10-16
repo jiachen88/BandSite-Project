@@ -98,4 +98,34 @@ a:active {
     }
 }
 
-.biography-footer {}
+.biography-footer {
+    @include padding;
+    background-color: #323232;
+    color: white;
+
+
+
+    &__header {
+        padding-top: 2rem;
+    }
+
+    &__icon {
+        margin-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__info {
+        margin: 0;
+        white-space: pre-line;
+        margin-bottom: 1rem;
+    }
+
+    &__head {
+        margin-top: 3rem;
+    }
+
+    &__copyright {
+        font-size: .73rem;
+        margin: 0%;
+    }
+}
