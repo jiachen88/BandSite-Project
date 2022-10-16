@@ -3,6 +3,7 @@
 
 @font-face {
     font-family: Avenir;
+
     src: url(./fonts/AvenirNextLTPro-Regular.otf);
 }
 
@@ -45,7 +46,7 @@ a:active {
     text-decoration: underline white;
 }
 
-.biography-main {
+.biography-section {
     background-image: url(../assets/Images/hero-bio.jpg);
     height: 10rem;
     background-repeat: no-repeat;
@@ -60,5 +61,21 @@ a:active {
         color: white;
         background: rgba(50, 50, 50, 0.50);
 
+    }
+}
+
+.biography-main {
+
+
+    &__header {
+        padding: 1.5rem 1rem 1rem 1rem;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    &__img {
+        max-width: 90%;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
