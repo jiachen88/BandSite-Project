@@ -55,13 +55,33 @@ a:active {
   background: rgba(50, 50, 50, 0.5);
 }
 
+.biography-main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .biography-main__header {
   padding: 1.5rem 1rem 1rem 1rem;
   margin: 0;
   font-weight: 400;
 }
 .biography-main__img {
-  max-width: 90%;
+  max-width: 100%;
+}
+
+.biography-gallery {
   padding-left: 1rem;
   padding-right: 1rem;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.biography-gallery__header {
+  margin-top: 1rem;
+  padding-top: 2rem;
+}
+.biography-gallery__img {
+  max-width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
