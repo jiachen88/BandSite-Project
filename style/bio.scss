@@ -72,7 +72,9 @@ a:active {
         height: 20rem;
     }
 
-
+    @include desktop {
+        height: 30rem;
+    }
 
     &__header {
         padding-left: 3rem;
@@ -87,6 +89,12 @@ a:active {
             padding-top: 10rem;
             font-size: 2rem
         }
+
+        @include desktop {
+            padding-top: 13rem;
+            font-size: 3rem;
+            height: 17rem
+        }
     }
 }
 
@@ -96,6 +104,11 @@ a:active {
     @include tablet {
         padding-left: 5rem;
         padding-right: 5rem;
+    }
+
+    @include desktop {
+        padding-left: 12rem;
+        padding-right: 12rem;
     }
 
     &__header {
@@ -137,12 +150,17 @@ a:active {
         flex-direction: row;
     }
 
+    @include desktop {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
     &__header {
         margin-top: 1rem;
         padding-top: 2rem;
 
         @include tablet {
-            margin-right: 25rem;
+            margin-right: 45rem;
         }
     }
 
@@ -163,28 +181,130 @@ a:active {
     background-color: #323232;
     color: white;
 
-    @include tablet {}
+
 
 
 
     &__header {
         padding-top: 2rem;
+
+        @include desktop {
+            margin-left: 3rem;
+        }
     }
 
     &__icon {
         margin-right: 1rem;
         padding-left: 1rem;
+
+        @include tablet {
+            padding-top: 2rem;
+        }
+
     }
+
+
 
     &__info {
         margin: 0;
         white-space: pre-line;
         margin-bottom: 1rem;
+
+
+
+        @include tablet {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        @include desktop {
+            margin-left: 3rem;
+            margin-right: 3rem;
+            padding-right: 5rem;
+        }
     }
 
     &__head {
         margin-top: 3rem;
+
+        @include tablet {
+            padding-left: 13rem;
+            margin-right: 5rem;
+        }
+
+        @include desktop {
+
+            margin-left: 23rem;
+        }
     }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+
+            @include desktop {}
+
+            :nth-child(1) {
+                order: 1;
+            }
+
+            :nth-child(2) {
+                order: 2;
+            }
+
+            :nth-child(3) {
+                order: 3;
+            }
+
+            :nth-child(4) {
+                order: 4;
+            }
+
+            :nth-child(5) {
+                order: 6;
+            }
+
+            :nth-child(6) {
+                order: 9;
+            }
+
+            :nth-child(7) {
+                order: 12;
+            }
+
+            :nth-child(8) {
+                order: 7;
+            }
+
+            :nth-child(9) {
+                order: 10;
+            }
+
+            :nth-child(10) {
+                order: 13;
+            }
+
+            :nth-child(11) {
+                order: 8;
+            }
+
+            :nth-child(12) {
+                order: 11;
+            }
+
+            :nth-child(13) {
+                order: 14;
+            }
+
+            :nth-child(14) {
+                order: 5;
+            }
+        }
+    }
+
 
     &__copyright {
         font-size: .73rem;
