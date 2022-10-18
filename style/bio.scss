@@ -45,6 +45,8 @@ body {
     &__link {
         margin: 0rem 1rem 0 1rem;
         padding: 1rem;
+        text-decoration: none;
+        color: white;
 
         @include tablet {
             padding-top: 1.5rem;
@@ -102,7 +104,7 @@ a:active {
         font-weight: 400;
 
         @include tablet {
-            padding-left: 5rem;
+
             padding-right: 5rem;
         }
     }
@@ -111,6 +113,17 @@ a:active {
         max-width: 100%;
     }
 
+    &__paragraph {
+        @include tablet {
+            margin: 1rem;
+        }
+    }
+
+    &__container {
+        @include tablet {
+            display: flex
+        }
+    }
 }
 
 .biography-gallery {

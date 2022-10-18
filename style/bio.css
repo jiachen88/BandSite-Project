@@ -37,6 +37,8 @@ body {
 .biography-head__link {
   margin: 0rem 1rem 0 1rem;
   padding: 1rem;
+  text-decoration: none;
+  color: white;
 }
 @media (min-width: 768px) {
   .biography-head__link {
@@ -97,12 +99,21 @@ a:active {
 }
 @media (min-width: 768px) {
   .biography-main__header {
-    padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 .biography-main__img {
   max-width: 100%;
+}
+@media (min-width: 768px) {
+  .biography-main__paragraph {
+    margin: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .biography-main__container {
+    display: flex;
+  }
 }
 
 .biography-gallery {
