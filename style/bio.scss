@@ -17,6 +17,12 @@ body {
     background-color: #323232;
     color: white;
 
+    &__nav {
+        @include tablet {
+            display: flex;
+        }
+    }
+
     &__title {
         margin-top: .5rem;
         margin-left: 5.5rem;
@@ -39,6 +45,12 @@ body {
     &__link {
         margin: 0rem 1rem 0 1rem;
         padding: 1rem;
+
+        @include tablet {
+            padding-top: 1.5rem;
+            margin-left: 5rem;
+            margin-right: -4rem;
+        }
     }
 }
 
@@ -52,6 +64,13 @@ a:active {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 100%;
+
+    @include tablet {
+        height: 20rem;
+    }
+
+
 
     &__header {
         padding-left: 3rem;
@@ -61,6 +80,11 @@ a:active {
         color: white;
         background: rgba(50, 50, 50, 0.50);
 
+        @include tablet {
+            height: 10rem;
+            padding-top: 10rem;
+            font-size: 2rem
+        }
     }
 }
 
