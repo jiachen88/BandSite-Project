@@ -1,0 +1,24 @@
+@use './variables.scss' as *;
+
+@mixin phone {
+    @media (min-width: $phone-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:$tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:$desktop-width) {
+        @content;
+    }
+}
+
+@mixin padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
