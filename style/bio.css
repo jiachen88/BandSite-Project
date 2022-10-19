@@ -190,14 +190,13 @@ a:active {
     margin-left: 3rem;
   }
 }
-.biography-footer__icon {
-  margin-right: 1rem;
-  padding-left: 1rem;
+.biography-footer__social {
+  display: flex;
 }
-@media (min-width: 768px) {
-  .biography-footer__icon {
-    padding-top: 2rem;
-  }
+.biography-footer__icon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 2rem;
 }
 .biography-footer__info {
   margin: 0;
@@ -226,58 +225,17 @@ a:active {
     margin-right: 5rem;
   }
 }
-@media (min-width: 1280px) {
-  .biography-footer__head {
-    margin-left: 23rem;
-  }
-}
 @media (min-width: 768px) {
   .biography-footer__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-  .biography-footer__container :nth-child(1) {
-    order: 1;
-  }
-  .biography-footer__container :nth-child(2) {
-    order: 2;
-  }
-  .biography-footer__container :nth-child(3) {
-    order: 3;
-  }
-  .biography-footer__container :nth-child(4) {
-    order: 4;
-  }
-  .biography-footer__container :nth-child(5) {
-    order: 6;
-  }
-  .biography-footer__container :nth-child(6) {
-    order: 9;
-  }
-  .biography-footer__container :nth-child(7) {
-    order: 12;
-  }
-  .biography-footer__container :nth-child(8) {
-    order: 7;
-  }
-  .biography-footer__container :nth-child(9) {
-    order: 10;
-  }
-  .biography-footer__container :nth-child(10) {
-    order: 13;
-  }
-  .biography-footer__container :nth-child(11) {
-    order: 8;
-  }
-  .biography-footer__container :nth-child(12) {
-    order: 11;
-  }
-  .biography-footer__container :nth-child(13) {
-    order: 14;
-  }
-  .biography-footer__container :nth-child(14) {
-    order: 5;
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .biography-footer__container {
+    flex-direction: column;
+    max-height: 12rem;
   }
 }
 .biography-footer__copyright {
