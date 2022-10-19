@@ -164,6 +164,11 @@ a:active {
     margin-right: 45rem;
   }
 }
+@media (min-width: 1280px) {
+  .biography-gallery__header {
+    margin-right: 75rem;
+  }
+}
 .biography-gallery__img {
   max-width: 100%;
   padding-top: 0.5rem;
