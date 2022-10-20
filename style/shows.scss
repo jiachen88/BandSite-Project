@@ -1,0 +1,51 @@
+@use './partials/variables.scss' as *;
+@use './partials/mixins.scss' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(./fonts/AvenirNextLTPro-Regular.otf);
+}
+
+.shows-head {
+    background-color: #323232;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+
+    &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include tablet {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+    }
+}

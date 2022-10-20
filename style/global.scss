@@ -1,0 +1,96 @@
+@use './partials/variables.scss' as *;
+@use './partials/mixins.scss' as *;
+
+
+
+.biography-footer {
+    padding: 0 2rem;
+
+    background-color: #323232;
+    color: white;
+    padding-top: 2rem;
+
+    &__header {
+        @include desktop {}
+    }
+
+    &__media {
+        display: flex;
+        align-content: center;
+
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+    }
+
+    &__icon {
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+
+
+    &__info {
+        margin: 0;
+        white-space: pre-line;
+        margin-bottom: 1rem;
+    }
+
+    &__head {
+        margin-top: 3rem;
+
+        @include tablet {
+            padding-left: 13rem;
+            margin-right: 5rem;
+        }
+    }
+
+    &__container {
+
+
+
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            max-height: 12rem;
+            max-width: 100%;
+            gap: 1rem;
+            justify-content: space-between;
+
+            @include desktop {
+                gap: 3rem;
+                max-height: 12rem;
+                max-width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &__top {
+        @include phone {
+            display: none;
+        }
+
+        @include tablet {
+            display: inline-block;
+        }
+    }
+
+    &__bottom {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__copyright {
+        font-size: .73rem;
+        margin: 0%;
+    }
+}
