@@ -1,5 +1,5 @@
-@use './partials/variables.scss' as *;
-@use './partials/mixins.scss' as *;
+@use"./partials/global" as*;
+@use './partials/mixins' as*;
 
 * {
     box-sizing: border-box;
@@ -7,17 +7,7 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Avenir;
 
-    src: url(./fonts/AvenirNextLTPro-Regular.otf);
-
-}
-
-body {
-    margin: 0;
-    font-family: avenir;
-}
 
 .biography-head {
     background-color: #323232;
@@ -191,11 +181,37 @@ a:active {
 }
 
 .biography-comments {
-    display: flex;
-    flex-wrap: wrap;
-
     padding: 0 1rem;
 
+    &__container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__header {
+        padding: 0 1rem;
+    }
+
+    &__name {
+        resize: none;
+        height: 2.25rem;
+        border: solid 1px #e1e1e1;
+        border-radius: 4px;
+    }
+
+    &__insert {
+        resize: none;
+        height: 5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: .25rem;
+
+    }
 
     &__img {
         width: 2.25rem;

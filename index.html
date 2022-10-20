@@ -89,17 +89,17 @@
     </section>
     <h2 class="biography-comments__header">Join the Conversation</h2>
     <section class="biography-comments">
-        <div>
+        <div class="biography-comments__container">
             <img class="biography-comments__img" src="./assets/Images/Mohan-muruge.jpg" alt="">
-        </div>
-        <div>
-            <form action="" method="post">
-                <input type="text" name="Search" placeholder="Search"><button>Submit</button>
-                <select name="" id="">
-                    <option value="2" default>two</option>
-                </select>
+            <form class="biography-comments__form" action="" method="post">
+                <label class="biography-comments__label" for="name">NAME</label>
+                <textarea class="biography-comments__name" name="comment"> </textarea>
+                <label class="biography-comments__label" for="comment">COMMENT</label>
+                <textarea class="biography-comments__insert" name="comment"> </textarea>
+                <button class="biography-comments__button">Comment</button>
             </form>
         </div>
+
     </section>
 
     <footer class="biography-footer">

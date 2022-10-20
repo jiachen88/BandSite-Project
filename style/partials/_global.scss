@@ -1,6 +1,11 @@
-@use './partials/variables.scss' as *;
-@use './partials/mixins.scss' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'fontface' as *;
 
+* {
+    margin: 0;
+    font-family: 'AvenirNext LT Pro';
+}
 
 
 .biography-footer {
