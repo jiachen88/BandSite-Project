@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: Avenir;
   src: url(./fonts/AvenirNextLTPro-Regular.otf);
@@ -83,7 +89,7 @@ a:active {
 }
 @media (min-width: 768px) {
   .biography-section__header {
-    height: 10rem;
+    height: 20rem;
     padding-top: 10rem;
     font-size: 2rem;
   }
@@ -92,7 +98,7 @@ a:active {
   .biography-section__header {
     padding-top: 13rem;
     font-size: 3rem;
-    height: 17rem;
+    height: 30rem;
   }
 }
 
@@ -102,14 +108,14 @@ a:active {
 }
 @media (min-width: 768px) {
   .biography-main {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
 @media (min-width: 1280px) {
   .biography-main {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    margin-left: 12rem;
+    margin-right: 12rem;
   }
 }
 .biography-main__header {
@@ -158,6 +164,7 @@ a:active {
 .biography-gallery__header {
   margin-top: 1rem;
   padding-top: 2rem;
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .biography-gallery__header {
@@ -168,6 +175,11 @@ a:active {
   .biography-gallery__header {
     margin-right: 75rem;
   }
+}
+.biography-gallery__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .biography-gallery__img {
   max-width: 100%;
@@ -182,44 +194,30 @@ a:active {
 }
 
 .biography-footer {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 2rem;
   background-color: #323232;
   color: white;
-}
-.biography-footer__header {
   padding-top: 2rem;
 }
-@media (min-width: 1280px) {
-  .biography-footer__header {
-    margin-left: 3rem;
-  }
+.biography-footer__media {
+  display: flex;
+  align-content: center;
 }
 .biography-footer__social {
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 .biography-footer__icon {
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-top: 2rem;
 }
 .biography-footer__info {
   margin: 0;
   white-space: pre-line;
   margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .biography-footer__info {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  .biography-footer__info {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-right: 5rem;
-  }
 }
 .biography-footer__head {
   margin-top: 3rem;
@@ -234,13 +232,33 @@ a:active {
   .biography-footer__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    max-height: 12rem;
+    max-width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
   }
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .biography-footer__container {
-    flex-direction: column;
+    gap: 3rem;
     max-height: 12rem;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 320px) {
+  .biography-footer__top {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .biography-footer__top {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .biography-footer__bottom {
+    display: none;
   }
 }
 .biography-footer__copyright {
