@@ -14,46 +14,36 @@ body {
 }
 
 .biography-head {
-  display: flex;
   background-color: #323232;
   color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.biography-head__nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
 }
 @media (min-width: 768px) {
   .biography-head__nav {
-    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
   }
 }
-.biography-head__title {
-  margin-top: 0.5rem;
-  margin-left: 5.5rem;
-  font-weight: 100;
-  max-width: 7.5rem;
-  max-height: 1.25rem;
-  font-size: 2.5rem;
-  text-decoration: none;
-  color: white;
+.biography-head__img {
+  display: flex;
+  justify-content: center;
 }
 .biography-head__list {
   display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  border-bottom: white;
-  flex-direction: row;
-  margin: 0;
-  padding-left: 2rem;
+  justify-content: center;
+  gap: 2rem;
 }
 .biography-head__link {
-  margin: 0rem 1rem 0 1rem;
-  padding: 1rem;
   text-decoration: none;
   color: white;
-}
-@media (min-width: 768px) {
-  .biography-head__link {
-    padding-top: 1.5rem;
-    margin-left: 5rem;
-    margin-right: -4rem;
-  }
+  list-style: none;
 }
 
 a:active {
@@ -82,7 +72,7 @@ a:active {
 .biography-section__header {
   padding-left: 3rem;
   padding-top: 4rem;
-  height: 6rem;
+  height: 10rem;
   margin: 0;
   color: white;
   background: rgba(50, 50, 50, 0.5);
@@ -191,6 +181,18 @@ a:active {
     max-width: 30%;
     margin: 0.5rem;
   }
+}
+
+.biography-comments {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+.biography-comments__img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
 }
 
 .biography-footer {

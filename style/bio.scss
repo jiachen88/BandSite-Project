@@ -19,48 +19,40 @@ body {
 }
 
 .biography-head {
-    display: flex;
     background-color: #323232;
     color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
 
     &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+
         @include tablet {
-            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
         }
     }
 
-    &__title {
-        margin-top: .5rem;
-        margin-left: 5.5rem;
-        font-weight: 100;
-        max-width: 7.5rem;
-        max-height: 1.25rem;
-        font-size: 2.5rem;
-        text-decoration: none;
-        color: white;
+    &__img {
+        display: flex;
+        justify-content: center;
     }
 
     &__list {
         display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        border-bottom: white;
-        flex-direction: row;
-        margin: 0;
-        padding-left: 2rem;
+        justify-content: center;
+        gap: 2rem;
     }
 
+
     &__link {
-        margin: 0rem 1rem 0 1rem;
-        padding: 1rem;
         text-decoration: none;
         color: white;
-
-        @include tablet {
-            padding-top: 1.5rem;
-            margin-left: 5rem;
-            margin-right: -4rem;
-        }
+        list-style: none;
     }
 }
 
@@ -87,7 +79,7 @@ a:active {
     &__header {
         padding-left: 3rem;
         padding-top: 4rem;
-        height: 6rem;
+        height: 10rem;
         margin: 0;
         color: white;
         background: rgba(50, 50, 50, 0.50);
@@ -195,6 +187,21 @@ a:active {
             margin: .5rem
         }
     }
+}
+
+.biography-comments {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+    &__img {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+    }
+
+
 }
 
 .biography-footer {
