@@ -1,6 +1,12 @@
 @use './partials/variables.scss' as *;
 @use './partials/mixins.scss' as *;
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: Avenir;
 
@@ -87,7 +93,7 @@ a:active {
         background: rgba(50, 50, 50, 0.50);
 
         @include tablet {
-            height: 10rem;
+            height: 20rem;
             padding-top: 10rem;
             font-size: 2rem
         }
@@ -95,7 +101,7 @@ a:active {
         @include desktop {
             padding-top: 13rem;
             font-size: 3rem;
-            height: 17rem
+            height: 30rem
         }
     }
 }
@@ -104,13 +110,13 @@ a:active {
     @include padding;
 
     @include tablet {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 
     @include desktop {
-        padding-left: 12rem;
-        padding-right: 12rem;
+        margin-left: 12rem;
+        margin-right: 12rem;
     }
 
     &__header {
@@ -148,6 +154,7 @@ a:active {
     flex-direction: column;
     flex-wrap: wrap;
 
+
     @include tablet {
         flex-direction: row;
     }
@@ -155,15 +162,27 @@ a:active {
     @include desktop {
         padding-left: 5rem;
         padding-right: 5rem;
+
     }
 
     &__header {
         margin-top: 1rem;
         padding-top: 2rem;
+        font-size: 2rem;
 
         @include tablet {
             margin-right: 45rem;
         }
+
+        @include desktop {
+            margin-right: 75rem;
+        }
+    }
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__img {
@@ -179,27 +198,35 @@ a:active {
 }
 
 .biography-footer {
-    @include padding;
+    padding: 0 2rem;
+
     background-color: #323232;
     color: white;
+    padding-top: 2rem;
 
     &__header {
-        padding-top: 2rem;
+        @include desktop {}
+    }
 
-        @include desktop {
-            margin-left: 3rem;
-            ;
-        }
+    &__media {
+        display: flex;
+        align-content: center;
+
     }
 
     &__social {
         display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
     }
 
     &__icon {
         margin-left: 1rem;
         margin-right: 1rem;
-        padding-top: 2rem;
+
     }
 
 
@@ -207,19 +234,6 @@ a:active {
         margin: 0;
         white-space: pre-line;
         margin-bottom: 1rem;
-
-
-
-        @include tablet {
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-
-        @include desktop {
-            margin-left: 3rem;
-            margin-right: 3rem;
-            padding-right: 5rem;
-        }
     }
 
     &__head {
@@ -232,15 +246,40 @@ a:active {
     }
 
     &__container {
+
+
+
+
         @include tablet {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            max-height: 12rem;
+            max-width: 100%;
+            gap: 1rem;
+            justify-content: space-between;
 
             @include desktop {
-                flex-direction: column;
+                gap: 3rem;
                 max-height: 12rem;
+                max-width: 100%;
+                justify-content: flex-start;
             }
+        }
+    }
+
+    &__top {
+        @include phone {
+            display: none;
+        }
+
+        @include tablet {
+            display: inline-block;
+        }
+    }
+
+    &__bottom {
+        @include tablet {
+            display: none;
         }
     }
 
