@@ -7,6 +7,57 @@
     font-family: 'AvenirNext LT Pro';
 }
 
+h2 {
+    font-weight: 600;
+}
+
+.biography-head {
+    background-color: #323232;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    @include tablet {
+
+        padding-left: 2rem;
+    }
+
+
+    &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include tablet {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+    }
+}
+
+a:active {
+    text-decoration: underline white;
+}
+
 
 .biography-footer {
     padding: 0 2rem;

@@ -173,6 +173,7 @@ a:active {
         padding-top: .5rem;
         padding-bottom: .5rem;
 
+
         @include tablet {
             max-width: 30%;
             margin: .5rem
@@ -189,6 +190,25 @@ a:active {
 
     }
 
+    &__label {
+        color: #afafaf;
+        margin: .25rem;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__commenter {
+        color: purple;
+    }
+
+    &__images {
+        height: 1rem;
+        width: 1rem;
+        background-color: #e1e1e1;
+    }
+
     &__header {
         padding: 0 1rem;
     }
@@ -198,11 +218,25 @@ a:active {
         height: 2.25rem;
         border: solid 1px #e1e1e1;
         border-radius: 4px;
+        background-color: #fafafa;
+
+    }
+
+    &__button {
+        background-color: #323232;
+        color: white;
+        font-weight: 600;
+        font-size: 2rem;
+        border-radius: .25rem;
+
     }
 
     &__insert {
         resize: none;
         height: 5rem;
+        background-color: #fafafa;
+        border: solid 1px #e1e1e1;
+        border-radius: .25rem;
     }
 
     &__form {
@@ -210,12 +244,23 @@ a:active {
         flex-direction: column;
         flex-wrap: wrap;
         border-radius: .25rem;
+        width: 100%;
+        padding: 1rem;
 
+        @include tablet {
+            width: 30rem;
+        }
     }
 
     &__img {
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
+        margin-top: 2.6rem;
+    }
+
+    &__holder {
+        display: flex;
+        justify-content: center;
     }
 }
