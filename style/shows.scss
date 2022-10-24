@@ -1,0 +1,166 @@
+@use './partials/mixins' as *;
+@use './partials/global' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.shows-head {
+    background-color: #323232;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+
+    &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include tablet {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        list-style: none;
+    }
+}
+
+.shows-section {
+    background-image: url(../assets/images/hero-shows.jpg);
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+
+    @include tablet {
+        height: 20rem;
+    }
+
+    @include desktop {
+        height: 30rem;
+    }
+
+    &__background {
+        display: flex;
+        height: 20rem;
+        margin: 0;
+        color: white;
+        flex-direction: column;
+
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+    }
+
+    &__header-2 {
+        background: rgba(50, 50, 50, 0.50);
+        padding-left: 3rem;
+    }
+
+    &__header-3 {
+        background: rgba(50, 50, 50, 0.50);
+
+        padding-left: 3rem;
+    }
+
+    &__iframe {
+        height: 20rem;
+        background: rgba(50, 50, 50, 0.50);
+        padding-left: 2rem;
+    }
+
+    &__header {
+        padding-left: 3rem;
+        padding-top: 4rem;
+
+        margin: 0;
+        color: white;
+        background: rgba(50, 50, 50, 0.50);
+        font-size: 1rem;
+
+        @include tablet {
+            height: 20rem;
+            padding-top: 10rem;
+            font-size: 2rem
+        }
+
+        @include desktop {
+            padding-top: 13rem;
+            font-size: 3rem;
+            height: 30rem
+        }
+    }
+
+    &__heads {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.shows-main {
+    background-color: white;
+    color: #323232;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        padding: 0 2rem;
+    }
+
+    &__tickets {
+        border-bottom: solid 1px #e1e1e1;
+    }
+
+    &__header {
+        padding: 2rem 0;
+    }
+
+    &__container {
+        margin: 1rem 0;
+    }
+
+    &__title {
+        color: #afafaf;
+        font-size: .75rem;
+
+    }
+
+    &__date {
+        font-weight: 700;
+    }
+
+    &__button {
+        color: white;
+        background-color: #323232;
+        border-radius: 0.25rem;
+        width: 20rem;
+        height: 2rem;
+        margin-top: 1rem;
+        font-weight: 700;
+    }
+}

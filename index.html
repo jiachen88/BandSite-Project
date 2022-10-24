@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BandSite</title>
+
     <link rel="stylesheet" href="./style/bio.css">
 </head>
 
@@ -13,12 +14,17 @@
 
     <header class="biography-head">
         <nav class="biography-head__nav">
-            <a class="biography-head__title" href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg"
-                    alt="Band Site Logo"></a>
-            <ul class="biography-head__list">
-                <li class="biography-head__link"><a class="biography-head__link" href="./index.html">Biography</a></li>
-                <li class="biography-head__link"><a class="biography-head__link" href=""></a>Shows</li>
-            </ul>
+            <div class="biography-head__img">
+                <a href="./index.html"><img src="./assets/Logo/Logo-bandsite.svg"></a>
+            </div>
+            <div>
+                <ul class="biography-head__list">
+                    <li class="biography-head__link"><a class="biography-head__link" href="./index.html">Biography</a>
+                    </li>
+                    <li class="biography-head__link"><a class="biography-head__link" href="./pages/shows.html">Shows</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="biography-section">
@@ -81,6 +87,21 @@
                 alt="Confetti raining down on a crowd">
         </div>
     </section>
+    <h2 class="biography-comments__header">Join the Conversation</h2>
+    <section class="biography-comments">
+        <div class="biography-comments__container">
+            <img class="biography-comments__img" src="./assets/Images/Mohan-muruge.jpg" alt="">
+            <form class="biography-comments__form" id="biographyComments" action="" method="post">
+                <label class="biography-comments__label" for="name">NAME</label>
+                <input class="biography-comments__name" id="commentName" type="text" name="name" />
+                <label class="biography-comments__label" for="comment">COMMENT</label>
+                <textarea class="biography-comments__insert" id="commentContent" name="comment"> </textarea>
+                <button class="biography-comments__button" type="submit">Comment</button>
+                <div id="largeContainer"></div>
+            </form>
+        </div>
+
+    </section>
 
     <footer class="biography-footer">
         <div class="biography-footer__social">
@@ -127,6 +148,7 @@
             <p class="biography-footer__copyright">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
         </div>
     </footer>
+    <script src="./scripts/index-page.js"></script>
 </body>
 
 </html>
