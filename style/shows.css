@@ -181,8 +181,8 @@ a:active {
 }
 
 .shows-section {
-  background-image: url(../assets/Images/hero-bio.jpg);
-  height: 10rem;
+  background-image: url(../assets/images/hero-shows.jpg);
+  height: 20rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -198,13 +198,38 @@ a:active {
     height: 30rem;
   }
 }
+.shows-section__background {
+  display: flex;
+  height: 20rem;
+  margin: 0;
+  color: white;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .shows-section__background {
+    flex-direction: row;
+  }
+}
+.shows-section__header-2 {
+  background: rgba(50, 50, 50, 0.5);
+  padding-left: 3rem;
+}
+.shows-section__header-3 {
+  background: rgba(50, 50, 50, 0.5);
+  padding-left: 3rem;
+}
+.shows-section__iframe {
+  height: 20rem;
+  background: rgba(50, 50, 50, 0.5);
+  padding-left: 2rem;
+}
 .shows-section__header {
   padding-left: 3rem;
   padding-top: 4rem;
-  height: 10rem;
   margin: 0;
   color: white;
   background: rgba(50, 50, 50, 0.5);
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .shows-section__header {
@@ -219,4 +244,46 @@ a:active {
     font-size: 3rem;
     height: 30rem;
   }
+}
+.shows-section__heads {
+  display: flex;
+  flex-direction: column;
+}
+
+.shows-main {
+  background-color: white;
+  color: #323232;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .shows-main {
+    padding: 0 2rem;
+  }
+}
+.shows-main__tickets {
+  border-bottom: solid 1px #e1e1e1;
+}
+.shows-main__header {
+  padding: 2rem 0;
+}
+.shows-main__container {
+  margin: 1rem 0;
+}
+.shows-main__title {
+  color: #afafaf;
+  font-size: 0.75rem;
+}
+.shows-main__date {
+  font-weight: 700;
+}
+.shows-main__button {
+  color: white;
+  background-color: #323232;
+  border-radius: 0.25rem;
+  width: 20rem;
+  height: 2rem;
+  margin-top: 1rem;
+  font-weight: 700;
 }/*# sourceMappingURL=shows.css.map */
