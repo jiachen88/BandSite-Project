@@ -1,13 +1,152 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  font-family: "AvenirNext LT Pro";
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.biography-head {
+  background-color: #323232;
+  color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .biography-head {
+    padding-left: 2rem;
+  }
+}
+.biography-head__nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .biography-head__nav {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+.biography-head__img {
+  display: flex;
+  justify-content: center;
+}
+.biography-head__list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.biography-head__link {
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+a:active {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+.biography-footer {
+  padding: 0 2rem;
+  background-color: #323232;
+  color: white;
+  padding-top: 2rem;
+}
+.biography-footer__media {
+  display: flex;
+  align-content: center;
+}
+.biography-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.biography-footer__icon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.biography-footer__info {
+  margin: 0;
+  white-space: pre-line;
+  margin-bottom: 1rem;
+}
+.biography-footer__head {
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .biography-footer__head {
+    padding-left: 13rem;
+    margin-right: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .biography-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 12rem;
+    max-width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .biography-footer__container {
+    gap: 3rem;
+    max-height: 12rem;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 320px) {
+  .biography-footer__top {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .biography-footer__top {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .biography-footer__bottom {
+    display: none;
+  }
+}
+.biography-footer__copyright {
+  font-size: 0.73rem;
+  margin: 0%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-@font-face {
-  font-family: Avenir;
-  src: url(./fonts/AvenirNextLTPro-Regular.otf);
-}
 .shows-head {
   background-color: #323232;
   color: white;
@@ -39,4 +178,45 @@
   text-decoration: none;
   color: white;
   list-style: none;
+}
+
+.shows-section {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .shows-section {
+    height: 20rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-section {
+    height: 30rem;
+  }
+}
+.shows-section__header {
+  padding-left: 3rem;
+  padding-top: 4rem;
+  height: 10rem;
+  margin: 0;
+  color: white;
+  background: rgba(50, 50, 50, 0.5);
+}
+@media (min-width: 768px) {
+  .shows-section__header {
+    height: 20rem;
+    padding-top: 10rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-section__header {
+    padding-top: 13rem;
+    font-size: 3rem;
+    height: 30rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

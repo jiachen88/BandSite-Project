@@ -1,5 +1,5 @@
-@use './partials/variables.scss' as *;
-@use './partials/mixins.scss' as *;
+@use './partials/mixins' as *;
+@use './partials/global' as *;
 
 * {
     box-sizing: border-box;
@@ -7,10 +7,6 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Avenir;
-    src: url(./fonts/AvenirNextLTPro-Regular.otf);
-}
 
 .shows-head {
     background-color: #323232;
@@ -47,5 +43,43 @@
         text-decoration: none;
         color: white;
         list-style: none;
+    }
+}
+
+.shows-section {
+    background-image: url(../assets/Images/hero-bio.jpg);
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+
+    @include tablet {
+        height: 20rem;
+    }
+
+    @include desktop {
+        height: 30rem;
+    }
+
+    &__header {
+        padding-left: 3rem;
+        padding-top: 4rem;
+        height: 10rem;
+        margin: 0;
+        color: white;
+        background: rgba(50, 50, 50, 0.50);
+
+        @include tablet {
+            height: 20rem;
+            padding-top: 10rem;
+            font-size: 2rem
+        }
+
+        @include desktop {
+            padding-top: 13rem;
+            font-size: 3rem;
+            height: 30rem
+        }
     }
 }

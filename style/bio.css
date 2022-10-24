@@ -331,14 +331,19 @@ a:active {
 .biography-comments__item {
   list-style: none;
 }
+.biography-comments__date {
+  color: #e1e1e1;
+}
 .biography-comments__commenter {
-  color: purple;
+  color: #323232;
+  margin-bottom: 1rem;
 }
 .biography-comments__images {
-  height: 1rem;
-  width: 1rem;
+  height: 2.25rem;
+  width: 2.25rem;
   background-color: #e1e1e1;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 .biography-comments__header {
   padding: 0 1rem;
@@ -353,9 +358,11 @@ a:active {
 .biography-comments__button {
   background-color: #323232;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2rem;
   border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .biography-comments__insert {
   resize: none;
@@ -385,5 +392,13 @@ a:active {
 }
 .biography-comments__holder {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.biography-comments__flex {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px #afafaf;
+  border-bottom: solid 1px #afafaf;
+  padding: 1rem;
 }/*# sourceMappingURL=bio.css.map */
