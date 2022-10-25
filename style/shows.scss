@@ -123,7 +123,6 @@
 
 .shows-main {
     background-color: white;
-    color: #323232;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -148,6 +147,14 @@
         color: #afafaf;
         font-size: .75rem;
 
+    }
+
+    &__venue {
+        color: #323232;
+    }
+
+    &__location {
+        color: #323232;
     }
 
     &__date {

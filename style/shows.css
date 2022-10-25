@@ -252,7 +252,6 @@ a:active {
 
 .shows-main {
   background-color: white;
-  color: #323232;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -274,6 +273,12 @@ a:active {
 .shows-main__title {
   color: #afafaf;
   font-size: 0.75rem;
+}
+.shows-main__venue {
+  color: #323232;
+}
+.shows-main__location {
+  color: #323232;
 }
 .shows-main__date {
   font-weight: 700;
