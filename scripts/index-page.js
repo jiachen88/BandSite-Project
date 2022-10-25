@@ -1,3 +1,12 @@
+//declaring api key
+let apiKey = ("api_key=de986b5f-41ca-426b-b1b5-bcad86d9fbe7")
+//declaring APIs
+const commentsApi = ("https://project-1-api.herokuapp.com/comments?api_key=de986b5f-41ca-426b-b1b5-bcad86d9fbe7")
+axios.get(commentsApi).then(response => {
+    console.log(response);
+    const commentsArray = response.data;
+    console.log(commentsArray)
+})
 //Declaring Const for comments
 const biographyComments = document.getElementById('biographyComments')
 const biographyCommentsEntries = document.getElementById('biographyCommentsEntry')
@@ -11,6 +20,7 @@ var day = currentDate.getDate()
 var month = currentDate.getMonth() + 1
 var year = currentDate.getFullYear()
 const dateForm = (day + "/" + month + "/" + year);
+
 //Renders new comments
 function renderComments() {
     bigContainer.innerText = '';
@@ -77,4 +87,5 @@ biographyComments.addEventListener('submit', function (event) {
     //runs render comments function
     renderComments();
 })
+
 
