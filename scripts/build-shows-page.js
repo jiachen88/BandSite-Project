@@ -16,6 +16,7 @@ axios.get(showsApi).then(response => {
         //creating elements
         let dateContainer = document.createElement('div')
         let dateTitle = document.createElement('h2')
+        let dateContent = document.createElement('p')
         let venueContainer = document.createElement('div')
         let venueTitle = document.createElement('h2')
         let venueContent = document.createElement('p')
@@ -23,13 +24,21 @@ axios.get(showsApi).then(response => {
         let locationTitle = document.createElement('h2')
         let locationContent = document.createElement('p')
         let buyButton = document.createElement('button')
+        //Converting Timestamp to
+        const timeStamp = showTimes[i].date
+        const dateFormat = new Date(timeStamp)
         //inserting content
+        dateTitle.innerText = "DATE"
+        dateContent.innerText = showTimes[i].date;
         venueTitle.innerText = "VENUE"
         venueContent.innerText = showTimes[i].place;
         locationTitle.innerText = "LOCATION"
         locationContent.innerText = showTimes[i].location;
         buyButton.innerText = "BUY TICKETS"
         //adding classes and styling to created elements
+        dateContainer.classList.add('shows-main__container')
+        dateTitle.classList.add('shows-main__title')
+        dateContent.classList.add('shows-main__date')
         venueContainer.classList.add('shows-main__container')
         venueTitle.classList.add('shows-main__title')
         venueContent.classList.add('shows-main__venue')
@@ -39,6 +48,9 @@ axios.get(showsApi).then(response => {
         buyButton.classList.add('shows-main__button')
 
         //appending childs and inserting content into right spots
+        showsContainer.appendChild(dateContainer);
+        dateContainer.appendChild(dateTitle);
+        dateContainer.appendChild(dateContent);
         showsContainer.appendChild(venueContainer);
         venueContainer.appendChild(venueTitle);
         venueContainer.appendChild(venueContent);

@@ -281,7 +281,8 @@ a:active {
   color: #323232;
 }
 .shows-main__date {
-  font-weight: 700;
+  font-weight: 600;
+  color: #323232;
 }
 .shows-main__button {
   color: white;
