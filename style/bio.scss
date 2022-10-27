@@ -186,22 +186,20 @@ a:active {
     &__container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         &-small {
             display: flex;
             border-bottom: solid 1px #afafaf;
             margin: 0 2rem;
             padding: 0 1rem;
+            width: 100%;
         }
     }
 
     &__label {
         color: #afafaf;
         margin: .25rem;
-    }
-
-    &__item {
-        list-style: none;
     }
 
     &__date {
@@ -262,7 +260,6 @@ a:active {
         width: 100%;
         padding: 1rem;
 
-
         @include tablet {
             width: 30rem;
         }
@@ -279,6 +276,7 @@ a:active {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        width: 100%;
 
     }
 
@@ -292,9 +290,5 @@ a:active {
         @include tablet {
             padding: 1rem 3rem;
         }
-
-
     }
-
-
 }
