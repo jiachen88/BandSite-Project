@@ -324,6 +324,12 @@ a:active {
   display: flex;
   justify-content: center;
 }
+.biography-comments__container-small {
+  display: flex;
+  border-bottom: solid 1px #afafaf;
+  margin: 0 2rem;
+  padding: 0 1rem;
+}
 .biography-comments__label {
   color: #afafaf;
   margin: 0.25rem;
@@ -397,8 +403,13 @@ a:active {
 }
 .biography-comments__flex {
   display: flex;
-  justify-content: space-between;
-  border-top: solid 1px #afafaf;
-  border-bottom: solid 1px #afafaf;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .biography-comments__flex {
+    padding: 1rem 3rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

@@ -187,6 +187,12 @@ a:active {
         display: flex;
         justify-content: center;
 
+        &-small {
+            display: flex;
+            border-bottom: solid 1px #afafaf;
+            margin: 0 2rem;
+            padding: 0 1rem;
+        }
     }
 
     &__label {
@@ -278,10 +284,16 @@ a:active {
 
     &__flex {
         display: flex;
-        justify-content: space-between;
-        border-top: solid 1px #afafaf;
-        border-bottom: solid 1px #afafaf;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         padding: 1rem;
+
+        @include tablet {
+            padding: 1rem 3rem;
+        }
+
+
     }
 
 

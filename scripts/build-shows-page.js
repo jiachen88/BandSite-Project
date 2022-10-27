@@ -8,8 +8,6 @@ axios.get(showsApi).then(response => {
     const showTimes = response.data;
     //Putting shows container in a variable
     let showsContainer = document.getElementById('showsContainer');
-    //clearing the container
-    showsContainer.innerText = '';
     //creating for loop for showTimes array
     for (let i = 0; i < showTimes.length; i++) {
         console.log(showTimes[i]);
@@ -24,25 +22,23 @@ axios.get(showsApi).then(response => {
         let locationTitle = document.createElement('h2')
         let locationContent = document.createElement('p')
         let buyButton = document.createElement('button')
-        //Converting Timestamp to
-        const timeStamp = showTimes[i].date
-        const dateFormat = new Date(timeStamp)
+
         //inserting content
         dateTitle.innerText = "DATE"
-        dateContent.innerText = showTimes[i].date;
+        dateContent.innerText = new Date(showTimes[i].date).toLocaleDateString();
         venueTitle.innerText = "VENUE"
         venueContent.innerText = showTimes[i].place;
         locationTitle.innerText = "LOCATION"
         locationContent.innerText = showTimes[i].location;
         buyButton.innerText = "BUY TICKETS"
         //adding classes and styling to created elements
-        dateContainer.classList.add('shows-main__container')
+        dateContainer.classList.add('shows-main__container-date')
         dateTitle.classList.add('shows-main__title')
         dateContent.classList.add('shows-main__date')
-        venueContainer.classList.add('shows-main__container')
+        venueContainer.classList.add('shows-main__container-venue')
         venueTitle.classList.add('shows-main__title')
         venueContent.classList.add('shows-main__venue')
-        locationContainer.classList.add('shows-main__container')
+        locationContainer.classList.add('shows-main__container-location')
         locationTitle.classList.add('shows-main__title')
         locationContent.classList.add('shows-main__location')
         buyButton.classList.add('shows-main__button')
@@ -58,27 +54,7 @@ axios.get(showsApi).then(response => {
         locationContainer.appendChild(locationTitle);
         locationContainer.appendChild(locationContent);
         showsContainer.appendChild(buyButton);
-
-
     }
-
-
 })
 
 
-
-
-
-/*             <div class="shows-main__container">
-                    <h2 class="shows-main__title">DATE</h2>
-                    <p class="shows-main__date">Mon Sept 06 2021</p>
-                </div>
-                <div class="shows-main__container">
-                    <h2 class="shows-main__title">VENUE</h2>
-                    <p class="shows-main__venue">Ronald Lane</p>
-                </div>
-                <div class="show-main__container">
-                    <h2 class="shows-main__title">LOCATION</h2>
-                    <p class="shows-main__location">San Francisco, CA</p>
-                </div>
-                <button class="shows-main__button">BUY TICKETS</button> */

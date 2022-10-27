@@ -123,6 +123,7 @@
 
 .shows-main {
     background-color: white;
+    color: #323232;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -133,15 +134,30 @@
 
     &__tickets {
         border-bottom: solid 1px #e1e1e1;
+
+        @include tablet {}
     }
 
     &__header {
         padding: 2rem 0;
     }
 
-    &__container {
+    &__container-date {
         margin: 1rem 0;
+
+
     }
+
+    &__container-venue {
+        margin: 1rem 0;
+
+    }
+
+    &__container-location {
+        margin: 1rem 0;
+
+    }
+
 
     &__title {
         color: #afafaf;

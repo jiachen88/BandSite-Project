@@ -252,6 +252,7 @@ a:active {
 
 .shows-main {
   background-color: white;
+  color: #323232;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -267,7 +268,13 @@ a:active {
 .shows-main__header {
   padding: 2rem 0;
 }
-.shows-main__container {
+.shows-main__container-date {
+  margin: 1rem 0;
+}
+.shows-main__container-venue {
+  margin: 1rem 0;
+}
+.shows-main__container-location {
   margin: 1rem 0;
 }
 .shows-main__title {
