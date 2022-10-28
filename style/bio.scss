@@ -276,8 +276,10 @@ a:active {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        width: 100%;
+    }
 
+    &__comment {
+        max-width: 100%;
     }
 
     &__flex {

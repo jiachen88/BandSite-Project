@@ -399,7 +399,9 @@ a:active {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+}
+.biography-comments__comment {
+  max-width: 100%;
 }
 .biography-comments__flex {
   display: flex;

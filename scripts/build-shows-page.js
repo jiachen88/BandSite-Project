@@ -8,6 +8,10 @@ axios.get(showsApi).then(response => {
     const showTimes = response.data;
     //Putting shows container in a variable
     let showsContainer = document.getElementById('showsContainer');
+    // const sortedResponse = obj.data.DoctorsList.sort(function(a, b) { return parseInt(a.id) - parseInt(b.id});
+
+
+
     //creating for loop for showTimes array
     for (let i = 0; i < showTimes.length; i++) {
         console.log(showTimes[i]);
@@ -25,7 +29,7 @@ axios.get(showsApi).then(response => {
 
         //inserting content
         dateTitle.innerText = "DATE"
-        dateContent.innerText = new Date(showTimes[i].date).toLocaleDateString();
+        dateContent.innerText = new Date(showTimes[i].date).toDateString();
         venueTitle.innerText = "VENUE"
         venueContent.innerText = showTimes[i].place;
         locationTitle.innerText = "LOCATION"
