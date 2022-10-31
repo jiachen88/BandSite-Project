@@ -63,7 +63,13 @@ axios.get(showsApi).then(response => {
         individualContainer.appendChild(buyButton)
         showsContainer.appendChild(individualContainer);
     }
-    const showCards = document.querySelectorAll()
+    const showCards = document.querySelectorAll('.shows-main__container-individual')
+    showCards.forEach(currentShowCard => {
+        currentShowCard.addEventListener('click', event => {
+            showCards.forEach(currentShowCard => { currentShowCard.removeAttribute('id', 'show__selected') })
+            currentShowCard.setAttribute('id', 'show__selected')
+        })
+    })
 })
 
 

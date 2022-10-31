@@ -27,6 +27,8 @@ function renderComments() {
                 let commenterComment = document.createElement('p');
                 let dateContainer = document.createElement('div');
                 let dateContent = document.createElement('p');
+                let mediumContainer = document.createElement('div');
+
                 //inserting content
                 imageContent.src = '../assets/images/Mohan-muruge.jpg';
                 commenterName.innerText = commentsArray[i].name;
@@ -39,18 +41,21 @@ function renderComments() {
                 imageContent.classList.add('biography-comments__images')
                 dateContent.classList.add('biography-comments__date')
                 bigContainer.classList.add('biography-comments__container-big')
+                mediumContainer.classList.add('biography-comments__container-medium')
                 //appending the elements to correct divs
-                bigContainer.appendChild(imageContainer);
+                mediumContainer.appendChild(imageContainer);
+                mediumContainer.appendChild(commenterName);
                 bigContainer.appendChild(commenterContainer);
                 smallContainer.appendChild(bigContainer)
                 commentsContainer.appendChild(smallContainer);
                 // smallContainer.appendChild(imageContainer)
                 imageContainer.appendChild(imageContent);
-                commenterContainer.appendChild(commenterName);
-                commenterContainer.appendChild(commenterComment);
+                commenterContainer.appendChild(mediumContainer);
+                // commenterContainer.appendChild(commenterComment);
+                smallContainer.appendChild(commenterComment)
                 // smallContainer.appendChild(commenterContainer);
-                smallContainer.appendChild(dateContainer);
                 dateContainer.appendChild(dateContent);
+                commenterContainer.appendChild(dateContainer)
             }
         }
         )
@@ -65,7 +70,6 @@ biographyComments.addEventListener('submit', function (event) {
             comment: event.target.comment.value
         }
     ).then(() => {
-        console.log("working")
         commentsContainer.innerText = '';
         renderComments();
         document.getElementById('biographyComments').reset();

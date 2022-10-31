@@ -150,16 +150,23 @@
         &-small {
             display: flex;
             border-bottom: solid 1px #afafaf;
-            justify-content: space-between;
             margin: 0 2rem;
             padding: 0 1rem;
             width: 100%;
+            flex-direction: column;
         }
 
         &-big {
             display: flex;
         }
+
+
+        &-medium {
+            display: flex;
+            flex-direction: row;
+        }
     }
+
 
     &__label {
         color: #afafaf;
@@ -242,9 +249,9 @@
 
     &__holder {
         display: flex;
+        width: 100%;
         justify-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: column;
+
     }
 
     &__comment {
