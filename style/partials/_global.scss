@@ -15,8 +15,8 @@ h2 {
 .biography-head {
     background-color: #323232;
     color: white;
-    padding-bottom: 1rem;
     padding-top: 1rem;
+
 
     @include tablet {
 
@@ -33,7 +33,9 @@ h2 {
         @include tablet {
             justify-content: flex-start;
             flex-direction: row;
+
         }
+
     }
 
     &__img {
@@ -43,7 +45,7 @@ h2 {
 
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 2rem;
     }
 
@@ -52,11 +54,16 @@ h2 {
         text-decoration: none;
         color: white;
         list-style: none;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+
     }
 }
 
-a:active {
-    text-decoration: underline white;
+a.activePage {
+    border-bottom: solid 3px white;
 }
 
 

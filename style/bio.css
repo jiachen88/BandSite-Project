@@ -28,7 +28,6 @@ h2 {
 .biography-head {
   background-color: #323232;
   color: white;
-  padding-bottom: 1rem;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
@@ -54,18 +53,20 @@ h2 {
 }
 .biography-head__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 .biography-head__link {
   text-decoration: none;
   color: white;
   list-style: none;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-a:active {
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+a.activePage {
+  border-bottom: solid 3px white;
 }
 
 .biography-footer {
@@ -145,44 +146,6 @@ a:active {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.biography-head {
-  background-color: #323232;
-  color: white;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-.biography-head__nav {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .biography-head__nav {
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-}
-.biography-head__img {
-  display: flex;
-  justify-content: center;
-}
-.biography-head__list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-.biography-head__link {
-  text-decoration: none;
-  color: white;
-  list-style: none;
-}
-
-a:active {
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
 }
 
 .biography-section {
@@ -320,19 +283,35 @@ a:active {
 .biography-comments {
   padding: 0 1rem;
 }
+.biography-comments__holder {
+  display: flex;
+  border-bottom: #afafaf 1px solid;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
 .biography-comments__container {
   display: flex;
   justify-content: center;
+}
+.biography-comments__container-large {
+  display: flex;
+}
+.biography-comments__container-medium {
+  display: flex;
+  justify-content: space-between;
+}
+.biography-comments__container-small {
+  width: 100%;
 }
 .biography-comments__label {
   color: #afafaf;
   margin: 0.25rem;
 }
-.biography-comments__item {
-  list-style: none;
-}
 .biography-comments__date {
   color: #e1e1e1;
+}
+.biography-comments__date-container {
+  display: flex;
 }
 .biography-comments__commenter {
   color: #323232;
@@ -346,7 +325,21 @@ a:active {
   margin-right: 1rem;
 }
 .biography-comments__header {
-  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .biography-comments__header {
+    padding-top: 2rem;
+    padding-left: 10rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .biography-comments__header {
+    padding-left: 15rem;
+    font-size: 2rem;
+  }
 }
 .biography-comments__name {
   resize: none;
@@ -390,15 +383,24 @@ a:active {
   border-radius: 50%;
   margin-top: 2.6rem;
 }
-.biography-comments__holder {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.biography-comments__commenter-name {
+  width: 100%;
+}
+.biography-comments__commenter-comment {
+  width: 100%;
 }
 .biography-comments__flex {
   display: flex;
-  justify-content: space-between;
-  border-top: solid 1px #afafaf;
-  border-bottom: solid 1px #afafaf;
+  flex-direction: column;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .biography-comments__flex {
+    padding: 1rem 8rem;
+  }
+}
+@media (min-width: 1280px) {
+  .biography-comments__flex {
+    padding: 1rem 25rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

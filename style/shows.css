@@ -28,7 +28,6 @@ h2 {
 .biography-head {
   background-color: #323232;
   color: white;
-  padding-bottom: 1rem;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
@@ -54,18 +53,20 @@ h2 {
 }
 .biography-head__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 .biography-head__link {
   text-decoration: none;
   color: white;
   list-style: none;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-a:active {
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+a.activePage {
+  border-bottom: solid 3px white;
 }
 
 .biography-footer {
@@ -163,6 +164,7 @@ a:active {
   .shows-head__nav {
     justify-content: flex-start;
     flex-direction: row;
+    padding-left: 1rem;
   }
 }
 .shows-head__img {
@@ -171,13 +173,14 @@ a:active {
 }
 .shows-head__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 .shows-head__link {
   text-decoration: none;
   color: white;
   list-style: none;
+  padding-bottom: 1rem;
 }
 
 .shows-section {
@@ -190,7 +193,7 @@ a:active {
 }
 @media (min-width: 768px) {
   .shows-section {
-    height: 20rem;
+    height: 25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -204,45 +207,57 @@ a:active {
   margin: 0;
   color: white;
   flex-direction: column;
+  background: rgba(50, 50, 50, 0.5);
 }
 @media (min-width: 768px) {
   .shows-section__background {
-    flex-direction: row;
+    height: 25rem;
   }
 }
-.shows-section__header-2 {
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 3rem;
-}
-.shows-section__header-3 {
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 3rem;
+@media (min-width: 1280px) {
+  .shows-section__background {
+    height: 30rem;
+    flex-direction: row;
+    padding-top: 7rem;
+    padding-left: 5rem;
+  }
 }
 .shows-section__iframe {
   height: 20rem;
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .shows-section__iframe {
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-section__iframe {
+    margin-left: 10rem;
+  }
 }
 .shows-section__header {
   padding-left: 3rem;
   padding-top: 4rem;
   margin: 0;
   color: white;
-  background: rgba(50, 50, 50, 0.5);
   font-size: 1rem;
 }
+.shows-section__header-2 {
+  padding-left: 3rem;
+}
 @media (min-width: 768px) {
-  .shows-section__header {
-    height: 20rem;
-    padding-top: 10rem;
-    font-size: 2rem;
+  .shows-section__header-2 {
+    font-size: 3rem;
   }
 }
-@media (min-width: 1280px) {
-  .shows-section__header {
-    padding-top: 13rem;
+.shows-section__header-3 {
+  padding-left: 3rem;
+}
+@media (min-width: 768px) {
+  .shows-section__header-3 {
     font-size: 3rem;
-    height: 30rem;
   }
 }
 .shows-section__heads {
@@ -253,37 +268,96 @@ a:active {
 .shows-main {
   background-color: white;
   color: #323232;
-  padding: 0 1rem;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
   .shows-main {
-    padding: 0 2rem;
+    padding: 0 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-main {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 .shows-main__tickets {
   border-bottom: solid 1px #e1e1e1;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .shows-main__tickets {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-main__tickets {
+    width: 100%;
+    padding-right: 10rem;
+  }
+}
+.shows-main__holder {
+  display: flex;
+  justify-content: flex-start;
 }
 .shows-main__header {
-  padding: 2rem 0;
+  padding: 1rem 1rem;
+  font-size: 3rem;
 }
-.shows-main__container {
+@media (min-width: 1280px) {
+  .shows-main__header {
+    padding: 2rem 5rem;
+  }
+}
+.shows-main__container-date {
   margin: 1rem 0;
+  width: 100%;
+}
+.shows-main__container-venue {
+  margin: 1rem 0;
+  width: 100%;
+}
+.shows-main__container-location {
+  margin: 1rem 0;
+  width: 100%;
+}
+.shows-main__container-individual {
+  border-bottom: #afafaf 2px solid;
+}
+@media (min-width: 768px) {
+  .shows-main__container-individual {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1280px) {
+  .shows-main__container-individual {
+    width: 100%;
+  }
 }
 .shows-main__title {
   color: #afafaf;
   font-size: 0.75rem;
 }
+.shows-main__venue {
+  color: #323232;
+}
+.shows-main__location {
+  color: #323232;
+}
 .shows-main__date {
-  font-weight: 700;
+  font-weight: 600;
+  color: #323232;
 }
 .shows-main__button {
   color: white;
   background-color: #323232;
   border-radius: 0.25rem;
-  width: 20rem;
   height: 2rem;
   margin-top: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+  width: 80%;
 }/*# sourceMappingURL=shows.css.map */

@@ -2,90 +2,77 @@
 let apiKey = ("api_key=de986b5f-41ca-426b-b1b5-bcad86d9fbe7")
 //declaring APIs
 const commentsApi = ("https://project-1-api.herokuapp.com/comments?api_key=de986b5f-41ca-426b-b1b5-bcad86d9fbe7")
-axios.get(commentsApi).then(response => {
-    console.log(response);
-    const commentsArray = response.data;
-    console.log(commentsArray)
-})
-//Declaring Const for comments
-const biographyComments = document.getElementById('biographyComments')
-const biographyCommentsEntries = document.getElementById('biographyCommentsEntry')
-const biographyCommentsContainer = [];
-const imageHolder = document.getElementById('commentsImage')
-const dateHolder = document.getElementById('commentsDate')
-const bigContainer = document.getElementById('largeContainer')
-///gather date
-const currentDate = new Date()
-var day = currentDate.getDate()
-var month = currentDate.getMonth() + 1
-var year = currentDate.getFullYear()
-const dateForm = (day + "/" + month + "/" + year);
 
-//Renders new comments
+let commentsContainer = document.getElementById('largeContainer')
+//sorts comments by date
+
+//for loop for comments
 function renderComments() {
-    bigContainer.innerText = '';
-    for (let i = 0; i < biographyCommentsContainer.length; i++) {
-        console.log(biographyCommentsContainer);
-        //Create elements
-        const biographyListArticle = document.createElement('li');
-        const biographyListName = document.createElement('h2');
-        const biographyListComment = document.createElement('p');
-        const biographyListImage = document.createElement('img')
-        const biographyDate = document.createElement('p')
-        const bigContainer = document.createElement('div')
-        const unorderedList = document.createElement('ul')
-        const commentHolder = document.createElement('div')
-        const imageContainer = document.createElement('div')
-        const biographyDateContainer = document.createElement('div')
-        ///gather date
-        const currentDate = new Date()
-        var day = currentDate.getDate()
-        var month = currentDate.getMonth() + 1
-        var year = currentDate.getFullYear()
-        const dateForm = (day + "/" + month + "/" + year);
+    axios.get(commentsApi)
+        .then(response => {
+            const commentsArray = response.data;
+            commentsArray.sort(function (a, b) { return parseInt(b.timestamp) - parseInt(a.timestamp) })
 
-        //adding classes to elements
-        bigContainer.classList.add('biography-comments__flex')
-        commentHolder.classList.add('biography-comments__holder')
-        biographyListArticle.classList.add('biography-comments__item')
-        biographyListName.classList.add('biography-comments__commenter');
-        biographyListComment.classList.add('biography-comments__content');
-        biographyListImage.classList.add('biography-comments__images');
-        biographyDate.classList.add('biography-comments__date')
-        //image and text
-        biographyListImage.src = '../assets/Images/Mohan-muruge.jpg'
-        biographyListName.innerText = biographyCommentsContainer[i].newCommentName;
-        biographyListComment.innerText = biographyCommentsContainer[i].newCommentContent;
-        biographyDate.innerText = dateForm;
+            //Declaring Const for comments
+            for (let i = 0; i < commentsArray.length; i++) {
 
-        //inserting elements into correct divs
-        largeContainer.appendChild(bigContainer);
-        bigContainer.appendChild(commentHolder);
-        commentHolder.appendChild(imageContainer);
-        imageContainer.appendChild(biographyListImage);
-        commentHolder.appendChild(unorderedList);
-        unorderedList.appendChild(biographyListArticle);
-        biographyListArticle.appendChild(biographyListName);
-        biographyListArticle.appendChild(biographyListComment);
-        bigContainer.appendChild(biographyDateContainer)
-        biographyDateContainer.appendChild(biographyDate)
-    }
-    console.log(biographyCommentsContainer)
+                console.log(commentsArray[i].comment);
+                //creating elements for comments to be inserted to
+                let largeContainer = document.createElement('div')
+                let commentsHolder = document.createElement('div')
+                let nameContainer = document.createElement('div')
+                let imageContent = document.createElement('img')
+                let mediumContainer = document.createElement('div')
+                let commenterName = document.createElement('h2')
+                let dateContainer = document.createElement('div')
+                let dateContent = document.createElement('p')
+                let smallContainer = document.createElement('div')
+                let commenterComment = document.createElement('p')
+
+
+                //inserting content
+                imageContent.src = '../assets/images/Mohan-muruge.jpg';
+                commenterName.innerText = commentsArray[i].name;
+                commenterComment.innerText = commentsArray[i].comment;
+                dateContent.innerText = new Date(commentsArray[i].timestamp).toLocaleDateString();
+                //adding classes to elements
+                imageContent.classList.add('biography-comments__images')
+                largeContainer.classList.add('biography-comments__container-large')
+                mediumContainer.classList.add('biography-comments__container-medium')
+                commentsHolder.classList.add('biography-comments__holder')
+                commenterComment.classList.add('biography-comments__commenter-comment')
+                commenterName.classList.add('biography-comments__commenter-name')
+                smallContainer.classList.add('biography-comments__container-small')
+                //appending the elements to correct divs
+                commentsContainer.appendChild(commentsHolder);
+                commentsHolder.appendChild(imageContent)
+                nameContainer.appendChild(commenterName)
+                mediumContainer.appendChild(nameContainer);
+                dateContainer.appendChild(dateContent);
+                mediumContainer.appendChild(dateContainer);
+                smallContainer.appendChild(mediumContainer);
+                smallContainer.appendChild(commenterComment);
+                commentsHolder.appendChild(smallContainer)
+
+
+            }
+        }
+        )
 }
+renderComments();
 //submit button event listener
 biographyComments.addEventListener('submit', function (event) {
     event.preventDefault();
-    console.log('comment posted');
-    //targets the text in the form
-    const newCommentName = event.target.name.value;
-    const newCommentContent = event.target.comment.value;
-    //puts the new comment at the top
-    biographyCommentsContainer.unshift({
-        newCommentName: newCommentName,
-        newCommentContent: newCommentContent
-    });
-    //runs render comments function
-    renderComments();
-})
+    axios.post("https://project-1-api.herokuapp.com/comments?api_key=de986b5f-41ca-426b-b1b5-bcad86d9fbe7",
+        {
+            name: event.target.name.value,
+            comment: event.target.comment.value
+        }
+    ).then(() => {
+        commentsContainer.innerText = '';
+        renderComments();
+        document.getElementById('biographyComments').reset();
+    })
+});
 
 

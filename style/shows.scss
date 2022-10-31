@@ -15,6 +15,7 @@
     padding-top: 1rem;
 
 
+
     &__nav {
         display: flex;
         justify-content: space-evenly;
@@ -24,6 +25,7 @@
         @include tablet {
             justify-content: flex-start;
             flex-direction: row;
+            padding-left: 1rem;
         }
     }
 
@@ -34,7 +36,7 @@
 
     &__list {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 2rem;
     }
 
@@ -43,6 +45,7 @@
         text-decoration: none;
         color: white;
         list-style: none;
+        padding-bottom: 1rem;
     }
 }
 
@@ -55,7 +58,7 @@
     max-width: 100%;
 
     @include tablet {
-        height: 20rem;
+        height: 25rem;
     }
 
     @include desktop {
@@ -68,29 +71,34 @@
         margin: 0;
         color: white;
         flex-direction: column;
-
+        background: rgba(50, 50, 50, 0.5);
 
         @include tablet {
+            height: 25rem;
+        }
+
+        @include desktop {
+            height: 30rem;
             flex-direction: row;
+            padding-top: 7rem;
+            padding-left: 5rem;
+
         }
 
     }
 
-    &__header-2 {
-        background: rgba(50, 50, 50, 0.50);
-        padding-left: 3rem;
-    }
-
-    &__header-3 {
-        background: rgba(50, 50, 50, 0.50);
-
-        padding-left: 3rem;
-    }
-
     &__iframe {
         height: 20rem;
-        background: rgba(50, 50, 50, 0.50);
-        padding-left: 2rem;
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 3rem;
+            padding-top: 2rem;
+        }
+
+        @include desktop {
+            margin-left: 10rem;
+        }
     }
 
     &__header {
@@ -99,20 +107,25 @@
 
         margin: 0;
         color: white;
-        background: rgba(50, 50, 50, 0.50);
+
         font-size: 1rem;
 
-        @include tablet {
-            height: 20rem;
-            padding-top: 10rem;
-            font-size: 2rem
+        &-2 {
+            padding-left: 3rem;
+
+            @include tablet {
+                font-size: 3rem;
+            }
         }
 
-        @include desktop {
-            padding-top: 13rem;
-            font-size: 3rem;
-            height: 30rem
+        &-3 {
+            @include tablet {
+                font-size: 3rem;
+            }
+
+            padding-left: 3rem;
         }
+
     }
 
     &__heads {
@@ -124,24 +137,76 @@
 .shows-main {
     background-color: white;
     color: #323232;
-    padding: 0 1rem;
     display: flex;
     flex-direction: column;
 
     @include tablet {
-        padding: 0 2rem;
+        padding: 0 0rem;
+
+    }
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     &__tickets {
         border-bottom: solid 1px #e1e1e1;
+        padding: 0 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include desktop {
+            width: 100%;
+            padding-right: 10rem;
+        }
+    }
+
+    &__holder {
+        display: flex;
+        justify-content: flex-start;
     }
 
     &__header {
-        padding: 2rem 0;
+        padding: 1rem 1rem;
+        font-size: 3rem;
+
+        @include desktop {
+            padding: 2rem 5rem;
+        }
     }
 
-    &__container {
+    &__container-date {
         margin: 1rem 0;
+        width: 100%;
+    }
+
+    &__container-venue {
+        margin: 1rem 0;
+        width: 100%;
+
+    }
+
+    &__container-location {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    &__container-individual {
+        border-bottom: #afafaf 2px solid;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @include desktop {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -150,17 +215,28 @@
 
     }
 
+    &__venue {
+        color: #323232;
+    }
+
+    &__location {
+        color: #323232;
+    }
+
     &__date {
-        font-weight: 700;
+        font-weight: 600;
+        color: #323232;
+
     }
 
     &__button {
         color: white;
         background-color: #323232;
         border-radius: 0.25rem;
-        width: 20rem;
+
         height: 2rem;
         margin-top: 1rem;
-        font-weight: 700;
+        font-weight: 600;
+        width: 80%;
     }
 }
