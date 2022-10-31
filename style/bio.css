@@ -28,7 +28,6 @@ h2 {
 .biography-head {
   background-color: #323232;
   color: white;
-  padding-bottom: 1rem;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
@@ -54,18 +53,20 @@ h2 {
 }
 .biography-head__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 .biography-head__link {
   text-decoration: none;
   color: white;
   list-style: none;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-a:active {
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+a.activePage {
+  border-bottom: solid 3px white;
 }
 
 .biography-footer {
@@ -145,44 +146,6 @@ a:active {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.biography-head {
-  background-color: #323232;
-  color: white;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-.biography-head__nav {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .biography-head__nav {
-    justify-content: flex-start;
-    flex-direction: row;
-  }
-}
-.biography-head__img {
-  display: flex;
-  justify-content: center;
-}
-.biography-head__list {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-.biography-head__link {
-  text-decoration: none;
-  color: white;
-  list-style: none;
-}
-
-a:active {
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
 }
 
 .biography-section {
@@ -328,9 +291,13 @@ a:active {
 .biography-comments__container-small {
   display: flex;
   border-bottom: solid 1px #afafaf;
+  justify-content: space-between;
   margin: 0 2rem;
   padding: 0 1rem;
   width: 100%;
+}
+.biography-comments__container-big {
+  display: flex;
 }
 .biography-comments__label {
   color: #afafaf;
@@ -338,6 +305,9 @@ a:active {
 }
 .biography-comments__date {
   color: #e1e1e1;
+}
+.biography-comments__date-container {
+  display: flex;
 }
 .biography-comments__commenter {
   color: #323232;
@@ -399,6 +369,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .biography-comments__comment {
   max-width: 100%;

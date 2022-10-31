@@ -18,6 +18,7 @@ function renderComments() {
 
                 console.log(commentsArray[i].comment);
                 //creating elements for comments to be inserted to
+                let bigContainer = document.createElement('div')
                 let smallContainer = document.createElement('div')
                 let imageContainer = document.createElement('div');
                 let imageContent = document.createElement('img');
@@ -37,13 +38,17 @@ function renderComments() {
                 commenterComment.classList.add('biography-comments__comment')
                 imageContent.classList.add('biography-comments__images')
                 dateContent.classList.add('biography-comments__date')
+                bigContainer.classList.add('biography-comments__container-big')
                 //appending the elements to correct divs
+                bigContainer.appendChild(imageContainer);
+                bigContainer.appendChild(commenterContainer);
+                smallContainer.appendChild(bigContainer)
                 commentsContainer.appendChild(smallContainer);
-                smallContainer.appendChild(imageContainer)
+                // smallContainer.appendChild(imageContainer)
                 imageContainer.appendChild(imageContent);
-                smallContainer.appendChild(commenterContainer);
                 commenterContainer.appendChild(commenterName);
                 commenterContainer.appendChild(commenterComment);
+                // smallContainer.appendChild(commenterContainer);
                 smallContainer.appendChild(dateContainer);
                 dateContainer.appendChild(dateContent);
             }
@@ -63,6 +68,7 @@ biographyComments.addEventListener('submit', function (event) {
         console.log("working")
         commentsContainer.innerText = '';
         renderComments();
+        document.getElementById('biographyComments').reset();
     })
 });
 
