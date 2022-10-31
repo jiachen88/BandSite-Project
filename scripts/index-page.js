@@ -18,16 +18,15 @@ function renderComments() {
 
                 console.log(commentsArray[i].comment);
                 //creating elements for comments to be inserted to
-                let bigContainer = document.createElement('div')
+                let largeContainer = document.createElement('div')
+                let imageContent = document.createElement('img')
+                let mediumContainer = document.createElement('div')
+                let commenterName = document.createElement('h2')
+                let dateContainer = document.createElement('div')
+                let dateContent = document.createElement('p')
                 let smallContainer = document.createElement('div')
-                let imageContainer = document.createElement('div');
-                let imageContent = document.createElement('img');
-                let commenterContainer = document.createElement('div');
-                let commenterName = document.createElement('h2');
-                let commenterComment = document.createElement('p');
-                let dateContainer = document.createElement('div');
-                let dateContent = document.createElement('p');
-                let mediumContainer = document.createElement('div');
+                let commenterComment = document.createElement('p')
+
 
                 //inserting content
                 imageContent.src = '../assets/images/Mohan-muruge.jpg';
@@ -35,27 +34,15 @@ function renderComments() {
                 commenterComment.innerText = commentsArray[i].comment;
                 dateContent.innerText = new Date(commentsArray[i].timestamp).toLocaleDateString();
                 //adding classes to elements
-                smallContainer.classList.add('biography-comments__container-small')
-                commenterContainer.classList.add('biography-comments__holder')
-                commenterComment.classList.add('biography-comments__comment')
-                imageContent.classList.add('biography-comments__images')
-                dateContent.classList.add('biography-comments__date')
-                bigContainer.classList.add('biography-comments__container-big')
-                mediumContainer.classList.add('biography-comments__container-medium')
+
                 //appending the elements to correct divs
-                mediumContainer.appendChild(imageContainer);
+                commentsContainer.appendChild(imageContent);
                 mediumContainer.appendChild(commenterName);
-                bigContainer.appendChild(commenterContainer);
-                smallContainer.appendChild(bigContainer)
-                commentsContainer.appendChild(smallContainer);
-                // smallContainer.appendChild(imageContainer)
-                imageContainer.appendChild(imageContent);
-                commenterContainer.appendChild(mediumContainer);
-                // commenterContainer.appendChild(commenterComment);
-                smallContainer.appendChild(commenterComment)
-                // smallContainer.appendChild(commenterContainer);
                 dateContainer.appendChild(dateContent);
-                commenterContainer.appendChild(dateContainer)
+                mediumContainer.appendChild(dateContainer);
+                smallContainer.appendChild(mediumContainer);
+                smallContainer.appendChild(commenterComment);
+                commentsContainer.appendChild(smallContainer);
             }
         }
         )
