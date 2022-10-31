@@ -192,7 +192,7 @@ a.activePage {
 }
 @media (min-width: 768px) {
   .shows-section {
-    height: 20rem;
+    height: 25rem;
   }
 }
 @media (min-width: 1280px) {
@@ -206,45 +206,44 @@ a.activePage {
   margin: 0;
   color: white;
   flex-direction: column;
+  background: rgba(50, 50, 50, 0.5);
 }
 @media (min-width: 768px) {
   .shows-section__background {
-    flex-direction: row;
+    height: 25rem;
   }
-}
-.shows-section__header-2 {
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 3rem;
-}
-.shows-section__header-3 {
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 3rem;
 }
 .shows-section__iframe {
   height: 20rem;
-  background: rgba(50, 50, 50, 0.5);
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .shows-section__iframe {
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
 }
 .shows-section__header {
   padding-left: 3rem;
   padding-top: 4rem;
   margin: 0;
   color: white;
-  background: rgba(50, 50, 50, 0.5);
   font-size: 1rem;
 }
+.shows-section__header-2 {
+  padding-left: 3rem;
+}
 @media (min-width: 768px) {
-  .shows-section__header {
-    height: 20rem;
-    padding-top: 10rem;
-    font-size: 2rem;
+  .shows-section__header-2 {
+    font-size: 3rem;
   }
 }
-@media (min-width: 1280px) {
-  .shows-section__header {
-    padding-top: 13rem;
+.shows-section__header-3 {
+  padding-left: 3rem;
+}
+@media (min-width: 768px) {
+  .shows-section__header-3 {
     font-size: 3rem;
-    height: 30rem;
   }
 }
 .shows-section__heads {
@@ -261,23 +260,40 @@ a.activePage {
 }
 @media (min-width: 768px) {
   .shows-main {
-    padding: 0 2rem;
+    padding: 0 0rem;
   }
 }
 .shows-main__tickets {
   border-bottom: solid 1px #e1e1e1;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .shows-main__tickets {
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+  }
 }
 .shows-main__header {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 .shows-main__container-date {
   margin: 1rem 0;
+  width: 100%;
 }
 .shows-main__container-venue {
   margin: 1rem 0;
+  width: 100%;
 }
 .shows-main__container-location {
   margin: 1rem 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shows-main__container-individual {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .shows-main__title {
   color: #afafaf;
@@ -297,8 +313,8 @@ a.activePage {
   color: white;
   background-color: #323232;
   border-radius: 0.25rem;
-  width: 20rem;
   height: 2rem;
   margin-top: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+  width: 100%;
 }/*# sourceMappingURL=shows.css.map */

@@ -15,6 +15,7 @@
     padding-top: 1rem;
 
 
+
     &__nav {
         display: flex;
         justify-content: space-evenly;
@@ -56,7 +57,7 @@
     max-width: 100%;
 
     @include tablet {
-        height: 20rem;
+        height: 25rem;
     }
 
     @include desktop {
@@ -69,29 +70,22 @@
         margin: 0;
         color: white;
         flex-direction: column;
-
+        background: rgba(50, 50, 50, 0.5);
 
         @include tablet {
-            flex-direction: row;
+            height: 25rem;
         }
 
     }
 
-    &__header-2 {
-        background: rgba(50, 50, 50, 0.50);
-        padding-left: 3rem;
-    }
-
-    &__header-3 {
-        background: rgba(50, 50, 50, 0.50);
-
-        padding-left: 3rem;
-    }
-
     &__iframe {
         height: 20rem;
-        background: rgba(50, 50, 50, 0.50);
-        padding-left: 2rem;
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 3rem;
+            padding-top: 2rem;
+        }
     }
 
     &__header {
@@ -100,20 +94,25 @@
 
         margin: 0;
         color: white;
-        background: rgba(50, 50, 50, 0.50);
+
         font-size: 1rem;
 
-        @include tablet {
-            height: 20rem;
-            padding-top: 10rem;
-            font-size: 2rem
+        &-2 {
+            padding-left: 3rem;
+
+            @include tablet {
+                font-size: 3rem;
+            }
         }
 
-        @include desktop {
-            padding-top: 13rem;
-            font-size: 3rem;
-            height: 30rem
+        &-3 {
+            @include tablet {
+                font-size: 3rem;
+            }
+
+            padding-left: 3rem;
         }
+
     }
 
     &__heads {
@@ -130,35 +129,47 @@
     flex-direction: column;
 
     @include tablet {
-        padding: 0 2rem;
+        padding: 0 0rem;
     }
 
     &__tickets {
         border-bottom: solid 1px #e1e1e1;
+        padding: 0 1rem;
 
-        @include tablet {}
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+
+            align-self: auto;
+        }
     }
 
     &__header {
-        padding: 2rem 0;
+        padding: 2rem 1rem;
     }
 
     &__container-date {
         margin: 1rem 0;
-
-
+        width: 100%;
     }
 
     &__container-venue {
         margin: 1rem 0;
+        width: 100%;
 
     }
 
     &__container-location {
         margin: 1rem 0;
-
+        width: 100%;
     }
 
+    &__container-individual {
+        @include tablet {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
 
     &__title {
         color: #afafaf;
@@ -184,9 +195,10 @@
         color: white;
         background-color: #323232;
         border-radius: 0.25rem;
-        width: 20rem;
+
         height: 2rem;
         margin-top: 1rem;
-        font-weight: 700;
+        font-weight: 600;
+        width: 100%;
     }
 }

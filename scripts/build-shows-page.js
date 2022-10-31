@@ -26,6 +26,7 @@ axios.get(showsApi).then(response => {
         let locationTitle = document.createElement('h2')
         let locationContent = document.createElement('p')
         let buyButton = document.createElement('button')
+        let individualContainer = document.createElement('div')
 
         //inserting content
         dateTitle.innerText = "DATE"
@@ -46,19 +47,23 @@ axios.get(showsApi).then(response => {
         locationTitle.classList.add('shows-main__title')
         locationContent.classList.add('shows-main__location')
         buyButton.classList.add('shows-main__button')
+        individualContainer.classList.add('shows-main__container-individual')
 
         //appending childs and inserting content into right spots
-        showsContainer.appendChild(dateContainer);
+
         dateContainer.appendChild(dateTitle);
         dateContainer.appendChild(dateContent);
-        showsContainer.appendChild(venueContainer);
         venueContainer.appendChild(venueTitle);
         venueContainer.appendChild(venueContent);
-        showsContainer.appendChild(locationContainer);
         locationContainer.appendChild(locationTitle);
         locationContainer.appendChild(locationContent);
-        showsContainer.appendChild(buyButton);
+        individualContainer.appendChild(dateContainer);
+        individualContainer.appendChild(venueContainer);
+        individualContainer.appendChild(locationContainer);
+        individualContainer.appendChild(buyButton)
+        showsContainer.appendChild(individualContainer);
     }
+    const showCards = document.querySelectorAll()
 })
 
 
