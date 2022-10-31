@@ -152,7 +152,7 @@
     &__container {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+
 
         &-large {
             display: flex;
@@ -199,7 +199,20 @@
     }
 
     &__header {
-        padding: 0 1rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-top: 2rem;
+            padding-left: 10rem;
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 15rem;
+            font-size: 2rem;
+        }
+
     }
 
     &__name {
@@ -271,6 +284,10 @@
 
         @include tablet {
             padding: 1rem 8rem;
+        }
+
+        @include desktop {
+            padding: 1rem 25rem;
         }
     }
 }
