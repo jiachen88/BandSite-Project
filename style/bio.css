@@ -283,25 +283,26 @@ a.activePage {
 .biography-comments {
   padding: 0 1rem;
 }
+.biography-comments__holder {
+  display: flex;
+  border-bottom: #afafaf 1px solid;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
 .biography-comments__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.biography-comments__container-small {
-  display: flex;
-  border-bottom: solid 1px #afafaf;
-  margin: 0 2rem;
-  padding: 0 1rem;
-  width: 100%;
-  flex-direction: column;
-}
-.biography-comments__container-big {
+.biography-comments__container-large {
   display: flex;
 }
 .biography-comments__container-medium {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+.biography-comments__container-small {
+  width: 100%;
 }
 .biography-comments__label {
   color: #afafaf;
@@ -369,23 +370,19 @@ a.activePage {
   border-radius: 50%;
   margin-top: 2.6rem;
 }
-.biography-comments__holder {
-  display: flex;
+.biography-comments__commenter-name {
   width: 100%;
-  justify-content: space-between;
 }
-.biography-comments__comment {
-  max-width: 100%;
+.biography-comments__commenter-comment {
+  width: 100%;
 }
 .biography-comments__flex {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
   padding: 1rem;
 }
 @media (min-width: 768px) {
   .biography-comments__flex {
-    padding: 1rem 3rem;
+    padding: 1rem 8rem;
   }
 }/*# sourceMappingURL=bio.css.map */

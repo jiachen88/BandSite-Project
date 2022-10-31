@@ -19,6 +19,8 @@ function renderComments() {
                 console.log(commentsArray[i].comment);
                 //creating elements for comments to be inserted to
                 let largeContainer = document.createElement('div')
+                let commentsHolder = document.createElement('div')
+                let nameContainer = document.createElement('div')
                 let imageContent = document.createElement('img')
                 let mediumContainer = document.createElement('div')
                 let commenterName = document.createElement('h2')
@@ -34,15 +36,25 @@ function renderComments() {
                 commenterComment.innerText = commentsArray[i].comment;
                 dateContent.innerText = new Date(commentsArray[i].timestamp).toLocaleDateString();
                 //adding classes to elements
-
+                imageContent.classList.add('biography-comments__images')
+                largeContainer.classList.add('biography-comments__container-large')
+                mediumContainer.classList.add('biography-comments__container-medium')
+                commentsHolder.classList.add('biography-comments__holder')
+                commenterComment.classList.add('biography-comments__commenter-comment')
+                commenterName.classList.add('biography-comments__commenter-name')
+                smallContainer.classList.add('biography-comments__container-small')
                 //appending the elements to correct divs
-                commentsContainer.appendChild(imageContent);
-                mediumContainer.appendChild(commenterName);
+                commentsContainer.appendChild(commentsHolder);
+                commentsHolder.appendChild(imageContent)
+                nameContainer.appendChild(commenterName)
+                mediumContainer.appendChild(nameContainer);
                 dateContainer.appendChild(dateContent);
                 mediumContainer.appendChild(dateContainer);
                 smallContainer.appendChild(mediumContainer);
                 smallContainer.appendChild(commenterComment);
-                commentsContainer.appendChild(smallContainer);
+                commentsHolder.appendChild(smallContainer)
+
+
             }
         }
         )
